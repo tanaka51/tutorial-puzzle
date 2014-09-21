@@ -146,7 +146,7 @@ Starting from background and with a little bit of basic geometry we will calcula
 
 ### The piece class
 
-_Previously we have created the __Piece__ class and now is the time to pick up again._
+_Previously we have created the **Piece** class and now is the time to pick up again._
 
 We will start with the class definition. Just go to the file Piece.h and paste the next code. Don´t worry if you dont understand something, we will study the meaning soon. 
 
@@ -173,10 +173,10 @@ We will start with the class definition. Just go to the file Piece.h and paste t
 
 As you can see, our pieces are going to be sprites. We will customize the functions _create_ and _init_ to init the piece with the desired image (which we will pass as a param). 
 
-We have defined two instance vars __actived_ and __targetPosition_:
+We have defined two instance vars *_actived* and *_targetPosition*:
 
-*  ___actived__  will serve as to identify if a piece is actived in a determinate moment or not. We will now if a user is touching this pieces in a concrete momment. We will use this var to know if we should give feedback to the user. For example: if the user is touching the piece we could make it little bit bigger or change the color.  
-*   In ___targetPosition__  we will save the exact point in which we consider this piece would be well placed. We also have defined a public setter for this var. 
+*  **_actived**  will serve as to identify if a piece is actived in a determinate moment or not. We will now if a user is touching this pieces in a concrete momment. We will use this var to know if we should give feedback to the user. For example: if the user is touching the piece we could make it little bit bigger or change the color.  
+*   In **_targetPosition**  we will save the exact point in which we consider this piece would be well placed. We also have defined a public setter for this var. 
 
 Finally we have defined a method to ask if the position of the piece in a concret moment is the good one. That will be very useful when we code the logic of the pieces. 
 
