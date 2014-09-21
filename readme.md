@@ -148,7 +148,7 @@ Starting from background and with a little bit of basic geometry we will calcula
 
 _Previously we have created the __Piece__ class and now is the time to pick up again._
 
-We will start with the class definition. Just go to the file Piece.h and paste the next code. Don´t worry if you dont understand something, we will study the meanning soon. 
+We will start with the class definition. Just go to the file Piece.h and paste the next code. Don´t worry if you dont understand something, we will study the meaning soon. 
 
 	#include "cocos2d.h"
 
