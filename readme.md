@@ -206,7 +206,6 @@ Add this code to Piece.cpp
 
 	}
 
-
 	bool Piece::init(const std::string &filename)
 	{
 	    if (!Sprite::initWithFile(filename)) {
