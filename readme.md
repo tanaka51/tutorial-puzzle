@@ -164,7 +164,7 @@ We will start with the class definition. Just go to the file Piece.h and paste t
 	public:
 	        
 	    // Constructor
-	    static PLPiece* create(const std::string &filename);
+	    static Piece* create(const std::string &filename);
 	    virtual bool init(const std::string &filename);
     
 	    void setTargetPosition(Vector2 targetPosition);
