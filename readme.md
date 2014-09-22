@@ -302,7 +302,7 @@ In the implementation of the init method we will add the next lines of code that
     listener->onTouchCancelled = CC_CALLBACK_2(Piece::onTouchCancel, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
-_Time for game logic. _
+_Time for game logic._
 
 We want to activate a Piece when the user touchs it. We have to check in the callback if the touch has happened over a piece. 
 
