@@ -289,6 +289,30 @@ We will declare the callbacks in Piece.h:
 	void onTouchMoved(Touch*, Event*);
 	void onTouchEnded(Touch*, Event*);
 	void onTouchCancel(Touch*, Event*);
+
+Add the line with the character "+" to the class definition.
+
+	class Piece: public Sprite
+	{
+		bool _actived;
+		Vector2 _targetPosition;
+		+EventListenerTouchOneByOne *listener;
+	    
+		void setActived(bool active);
+	    
+	public:
+	        
+		// Constructor
+		static Piece* create(const std::string &filename);
+		virtual bool init(const std::string &filename);
+  
+		void setTargetPosition(Vector2 targetPosition);
+		bool currentLocationSuccess();
+
+		+bool onTouchBegan(Touch*, Event*);
+		+void onTouchMoved(Touch*, Event*);
+		+void onTouchEnded(Touch*, Event*);
+	};
 	
 I call them in this way to keep it standard, but since cocos v3 you are free to change the names or even to declare them inline. Just remember to keep the params and the return type. 
 
@@ -302,6 +326,25 @@ In the implementation of the init method we will add the next lines of code that
     listener->onTouchCancelled = CC_CALLBACK_2(Piece::onTouchCancel, this);
     _eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
     
+Add the line with the character "+" to the _init_ method.
+
+    bool Piece::init(const std::string &filename)
+    {
+        if (!Sprite::initWithFile(filename))
+        {
+            return false;
+        }
+
+        +listener = EventListenerTouchOneByOne::create();
+
+        +listener->onTouchBegan = CC_CALLBACK_2(Piece::onTouchBegan, this);
+        +listener->onTouchMoved = CC_CALLBACK_2(Piece::onTouchMoved, this);
+        +listener->onTouchEnded = CC_CALLBACK_2(Piece::onTouchEnded, this);
+        +_eventDispatcher->addEventListenerWithSceneGraphPriority(listener, this);
+
+        return true;
+    }
+
 _Time for game logic._
 
 We want to activate a Piece when the user touchs it. We have to check in the callback if the touch has happened over a piece. 
