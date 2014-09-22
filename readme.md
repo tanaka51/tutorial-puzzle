@@ -188,7 +188,7 @@ This methods are an standard pattern from Cococs2d-x. If you are veteran from Co
 
 If you are asking yourself how them work just visit the wiki of [Cocos2d-x](http://www.cocos2d-x.org/wiki). Theres a section about memory management and the retain/release pattern inherited from Objetive-C.
 
-Add this code to Piece.m
+Add this code to Piece.cpp
 
 	Piece* Piece::create(const std::string &filename)
 	{
