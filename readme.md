@@ -215,6 +215,11 @@ Add this code to Piece.cpp
 	    return true;
 	}
 		
+	void Piece::setActived(bool active)
+	{
+	    this->_actived = active;
+	}
+
 	void Piece::setTargetPosition(cocos2d::math::Vector2 targetPosition)
 	{
 	    this->_targetPosition = targetPosition;
